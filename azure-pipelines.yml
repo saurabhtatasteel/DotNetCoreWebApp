@@ -22,13 +22,13 @@ steps:
     packageType: sdk
     version: 2.1.505
   
-- task: DotNetCoreCLI@3
+- task: DotNetCoreCLI@2
   displayName: 'Restore project dependencies'
   inputs:
     command: 'restore'
     projects: '**/*.csproj'
     
-- task: DotNetCoreCLI@3
+- task: DotNetCoreCLI@2
   displayName: 'Build the project - Release'
   inputs:
     command: 'build'
