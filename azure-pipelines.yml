@@ -16,19 +16,19 @@ variables:
 
 steps:
 
-- task: UseDotNet@2
+- task: UseDotNet@3
   displayName: 'Use .NET Core SDK 2.1.505'
   inputs:
     packageType: sdk
     version: 2.1.505
   
-- task: DotNetCoreCLI@2
+- task: DotNetCoreCLI@3
   displayName: 'Restore project dependencies'
   inputs:
     command: 'restore'
     projects: '**/*.csproj'
     
-- task: DotNetCoreCLI@2
+- task: DotNetCoreCLI@3
   displayName: 'Build the project - Release'
   inputs:
     command: 'build'
